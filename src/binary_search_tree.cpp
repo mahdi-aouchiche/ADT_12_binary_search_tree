@@ -326,12 +326,12 @@ void BSTree::visualize_tree(const string &outputFilename) {
   
   outFS << "digraph G {" << endl;
   // output the nodes 
-  outFS << "// nodes:" << endl;
+  outFS << "  // nodes:" << endl;
   if(this->root != nullptr) {
     this->visualize_nodes(outFS,this->root);
   }
   // output the edges 
-  outFS << "// edges:" << endl;
+  outFS << "  // edges:" << endl;
   if(this->root != nullptr) {
     this->visualize_tree(outFS,this->root);
   }  
@@ -361,6 +361,7 @@ void BSTree::visualize_tree(ofstream &outFS, Node* node) {
   if(node->getLeftChild()) {
     visualize_tree( outFS, node->getLeftChild() );
     outFS 
+      << "  "
       << node->getNodeID() << " -> " 
       << node->getLeftChild()->getNodeID() 
       << ";" << endl
@@ -370,6 +371,7 @@ void BSTree::visualize_tree(ofstream &outFS, Node* node) {
   if(node->getRightChild()) {
     visualize_tree( outFS, node->getRightChild() );
     outFS 
+      << "  "
       << node->getNodeID() << " -> " 
       << node->getRightChild()->getNodeID() 
       << ";" << endl
@@ -385,7 +387,7 @@ void BSTree::visualize_nodes(ofstream &outputfile, Node* node) {
   visualize_nodes(outputfile, node->getLeftChild());
   visualize_nodes(outputfile, node->getRightChild());
   
-  outputfile << node->getNodeID();  
+  outputfile << "  " << node->getNodeID();  
   outputfile << " [shape=circle, color=lightblue, peripheries=2, style=filled, label=\""; 
   outputfile << node->getStr() << "\\n(" << node->getCount() << ")\"]" << endl; 
 }
