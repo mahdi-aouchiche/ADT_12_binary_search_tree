@@ -13,8 +13,8 @@ Author: Mahdi Aouchiche (<https://github.com/mahdi-aouchiche/ADT_12_binary_searc
   * Height   : displays the height of a given string in the tree.
   * Visualize: display a visual of the BST.
 
-> Note 1: The BST is written to a ".dot" file as a graph in 'output_files' folder. Graphviz program uses the the generated ".dot" file to display the BST tree as a 'jpg' image.
-> Note 2: If the graphviz program is not installed or not installed correctly. Copy the ".dot" file and paste it on [webgraphviz][graphviz] to see the BST tree visualization.
+> Notes: The BST is written to a ".dot" file as a graph in 'output_files' folder. Graphviz program uses the the generated ".dot" file to display the BST tree as a 'jpg' image.
+If the graphviz program is not installed or not installed correctly. Copy the ".dot" file and paste it on [webgraphviz][graphviz] to see the BST tree visualization.
 
 ## To run the project nicely run the following commands
 
